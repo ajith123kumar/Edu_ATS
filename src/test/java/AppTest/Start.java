@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class openapp
-{
-
+public class Start {
 	public static void main(String[] args) throws Exception {
 
 		WebDriver driver = new ChromeDriver();
@@ -20,7 +18,6 @@ public class openapp
 			Login_success.userlogin(driver);
 			invalid_Login.invaliduserlogin(driver);
 			searchJob.searchnewjob(driver);
-
 			System.out.println("***Testing is Successful***");
 
 		}
@@ -34,6 +31,7 @@ public class openapp
 			driver.quit();
 		}
 
+
 	}
 
-}
+	}

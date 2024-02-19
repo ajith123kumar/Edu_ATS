@@ -2,8 +2,12 @@ package AppTest;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
 public class invalid_Login {
-	static void invaliduserlogin(Webdriver driver) throws Exception
+	static void invaliduserlogin(WebDriver driver) throws Exception
 	//Method for login
 {
 		
@@ -14,17 +18,17 @@ public class invalid_Login {
 		try {
 			
 		// Start login
-		driver.findElement(By.xpath("//a[@id='login_Layer']").sendKeys.Enter);
+		driver.findElement(By.xpath("//a[@id='login_Layer']")).sendKeys(Keys.ENTER);
 		System.out.println("*****Login Page Open*****");
-		driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']")).sendKeys("testasdf@mail.ced".ENTER);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your active Email ID / Username']")).sendKeys("testasdf@mail.ced"+Keys.ENTER);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("sdfasdf"+Keys.ENTER);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("sdfasdf" +Keys.ENTER);
 		
 		//exception handled because of steal element to continue code execution
 		//try catch allows to defined a block of code to be tested for exceptions(errors) while executed
 		System.out.println("*****Login values Enterd Place Entered*****");
 		
-		driver.findElement(By.xpth("//button[@type='submit']")).click();
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 
 		System.out.println("***Login unSuccessful***");
 
